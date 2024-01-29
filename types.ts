@@ -95,3 +95,23 @@ function tupleInTS() {
 }
 
 // any는 TS의 보호장치를 벗어난다.
+
+// TS는 Type Checker와의 대화이다. 그런데 모르는 타입이면? 미리 알 수 없는 타입이라면
+
+let a: unknown;
+if (typeof a === 'number') {
+	let b = a + 1;
+}
+
+// void 리턴 값이 없는 function
+
+function hello() {
+	console.log('hello');
+}
+
+// never 절대 return 하지않아
+function hello2(name: string | number) {
+	if (typeof name === 'number') console.log('num');
+	else if (typeof name === 'string') console.log('str');
+	else throw new Error(name);
+}
