@@ -34,4 +34,11 @@ function overLoading() {
 	 * Router.push({* path:"/home"})
 	 * "/home"
 	 */
+
+	type Add2 = {
+		(a: number, b: number): number;
+		(a: number, b: number, c: number): number;
+	};
+
+	const add2: Add2 = (a, b, c?: number) => (c ? a + b + c : a + b);
 }
