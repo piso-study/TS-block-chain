@@ -74,18 +74,24 @@ function returnAndArgument() {
 	pl3.age = 3;
 }
 
-// readonly 속성이 있음 TS로 immutuable 하게 만들 수 있다.
-type Player = {
-	readonly name: string;
-	age?: number;
-};
+/** readonly 속성이 있음 TS로 immutuable 하게 만들 수 있다. */
+function readOnly() {
+	type Player = {
+		readonly name: string;
+		age?: number;
+	};
 
-const playerMaker = (name: string): Player => ({ name });
-const pl4 = playerMaker('player 4');
+	const playerMaker = (name: string): Player => ({ name });
+	const pl4 = playerMaker('player 4');
 
-console.log(pl4.name);
+	console.log(pl4.name);
+}
 
-//Tuple의 정의
-const player1: [string, number, boolean] = ['name', 12, true];
-// tuple + readonly
-const player2: readonly [string, number, boolean] = ['name', 12, true];
+function tupleInTS() {
+	//Tuple의 정의
+	const player1: [string, number, boolean] = ['name', 12, true];
+	// tuple + readonly
+	const player2: readonly [string, number, boolean] = ['name', 12, true];
+}
+
+// any는 TS의 보호장치를 벗어난다.

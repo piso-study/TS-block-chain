@@ -16,3 +16,6 @@
 
 -   let a = 'hello'
     > Ts 타입추론을 한다. string 으로
+https://wrtn.ai/
+https://playgroundai.com/pricing
+https://app.leonardo.ai/
