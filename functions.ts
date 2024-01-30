@@ -72,5 +72,5 @@ function polymorphism() {
 function generic() {
 	type Player<E> = { name: string; extranInfo: E };
 
-	const nico: Player<{ favFood: string }> = { name: 'name', extranInfo: { favFood: 'ss' } };
+	const nico: Player<{ favFood: string }> = { name: 'name', extranInfo: { favFood: 'Apple Pie' } };
 }
