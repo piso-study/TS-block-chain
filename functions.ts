@@ -42,3 +42,35 @@ function overLoading() {
 
 	const add2: Add2 = (a, b, c?: number) => (c ? a + b + c : a + b);
 }
+
+/**
+ * Polymorphism
+ * 다형성 ?
+ * 제네릭을 도와줘
+ * 그 타입을 미리 알 수 없을 때
+ */
+function polymorphism() {
+	type SuperPrint = {
+		// (arr: number[]): void;
+		// (arr: boolean[]): void;
+		<T>(arr: T[]): void;
+	};
+
+	const superPreint: SuperPrint = (arr) => {
+		arr.forEach((i) => console.log(i));
+	};
+
+	superPreint([1, 2, 3, 4]);
+	superPreint([true, false, true]);
+	superPreint(['a', 'b', 'c']);
+	superPreint([1, 2, true, false, 'a', 'b']);
+}
+
+/**
+ * Generics
+ */
+function generic() {
+	type Player<E> = { name: string; extranInfo: E };
+
+	const nico: Player<{ favFood: string }> = { name: 'name', extranInfo: { favFood: 'ss' } };
+}
