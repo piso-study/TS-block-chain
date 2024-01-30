@@ -6,3 +6,5 @@
 -   Call Signatures
 -   Polymorphism
 -   Generics
+-   class
+-   interface
